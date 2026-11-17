@@ -116,7 +116,7 @@ val bankGraph: Graph[(String, String), Double] = Graph(vRDD, eRDD)
 ```
 
 > 📸 **Capture d'écran de l'exécution :**  
-> ![Création du graphe](imgs/q1_graph_creation.png)
+> ![Création du graphe](imgs/qst1.png)
 
 ---
 
@@ -159,7 +159,7 @@ Ville : Fes      | Connexions : 2
 ```
 
 > 📸 **Capture d'écran de l'exécution :**  
-> ![Connexions par ville](imgs/q2_degrees.png)
+> ![Connexions par ville](imgs/qst2.png)
 
 ### 🔍 Interprétation
 * **Lyon (5)** et **Zug (5)** constituent les deux nœuds centraux majeurs (hubs d'aiguillage).
@@ -224,7 +224,7 @@ Ville : Balboa   | Solde net : +140.0 k€
 ```
 
 > 📸 **Capture d'écran de l'exécution :**  
-> ![Solde net par ville](imgs/q3_solde_net.png)
+> ![Solde net par ville](imgs/qst3.png)
 
 ### 🔍 Interprétation
 * **Principe de conservation :** La somme algébrique de tous les soldes nets s'élève exactement à **`0.0 k€`**, confirmant qu'aucune valeur n'a été perdue ni injectée artificiellement.
@@ -261,7 +261,7 @@ bankGraph.vertices.join(scc.vertices).collect.groupBy(_._2._2).filter(_._2.size 
 ```
 
 > 📸 **Capture d'écran de l'exécution :**  
-> ![Cycles détectés](imgs/q4_cycles.png)
+> ![Cycles détectés](imgs/qst4.png)
 
 ### 🔍 Interprétation
 GraphX isole précisément les deux boucles orientées du réseau :
@@ -304,7 +304,7 @@ Panama   -> Suisse   : 70 k€
 ```
 
 > 📸 **Capture d'écran de l'exécution :**  
-> ![Flux entre pays](imgs/q5_inter_country.png)
+> ![Flux entre pays](imgs/qst5.png)
 
 ### 🔍 Détail arithmétique des flux :
 * **France $\to$ Suisse (195 k€) :**  
@@ -348,7 +348,7 @@ Virements internes Suisse   : 30 k€
 ```
 
 > 📸 **Capture d'écran de l'exécution :**  
-> ![Virements internes](imgs/q6_intra_country.png)
+> ![Virements internes](imgs/qst6.png)
 
 ### 🔍 Justification des cumuls internes :
 * **Panama (90 k€) :** Colon $\to$ Balboa (90 k€).
